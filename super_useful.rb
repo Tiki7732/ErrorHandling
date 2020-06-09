@@ -38,6 +38,15 @@ class BestFriend
     @name = name
     @yrs_known = yrs_known
     @fav_pastime = fav_pastime
+    if @yrs_known < 5 
+      raise "We haven't known each other long enough to be besties!"
+    end
+    if @name.length < 1
+      raise "What, no name? How can we be besties without knowing your name?"
+    end
+    if @fav_pastime.length < 1
+      raise "How can we be besties if we don't have a favorite pastime?"
+    end
   end
 
   def talk_about_friendship
